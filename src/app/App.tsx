@@ -23,6 +23,9 @@ import {
   type PresentationOptimizationResult,
 } from './components/presentation-optimizer';
 import { FileText, Zap, BarChart3, Upload, Download, X } from 'lucide-react';
+import { initWasm, isWasmLoaded } from '../wasm/daaWrapper';
+
+initWasm().catch(console.error);
 
 function createBlobFromBytes(data: Uint8Array, type: string) {
   return new Blob([Uint8Array.from(data)], { type });

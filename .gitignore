@@ -1,2 +1,5 @@
 node_modules/
 dist/
+cpp/build/
+cpp/build_wasm.bat
+emsdk/
